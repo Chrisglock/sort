@@ -14,7 +14,7 @@ def get_pivot(array, i, j):
 
 def quick_sort(array, i=None, j=None):
     if i == None:
-        i = 1
+        i = 0
     if j == None:
         j = len(array) - 1
         
