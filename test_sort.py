@@ -103,25 +103,25 @@ class TestSortingAlgorithms(unittest.TestCase):
         """
         Prueba caso general #1
         """
-        a = [110, 78, 345, 23, 324, 547, 158]
+        a = [5, 1, 6, 3, 2, 7, 4]
         sort.selectionSort(a)
-        self.assertEqual(a, [23, 78, 110, 158, 324, 345, 547])  
+        self.assertEqual(a, [1, 2, 3, 4, 5, 6, 7])  
 
     def test_selection_sort_2(self):
         """
         Prueba caso general #2
         """
-        a = [110, 78, 345, 23, 324, 547, 158]
+        a = [50, 10, 60, 30, 20, 70, 40]
         sort.selectionSort(a)
-        self.assertEqual(a, [23, 78, 110, 158, 324, 345, 547])  
+        self.assertEqual(a, [10, 20, 30, 40, 50, 60, 70])  
 
     def test_selection_sort_3(self):
         """
         Prueba caso general #3
         """
-        a = [110, 78, 345, 23, 324, 547, 158]
+        a = [500, 100, 600, 300, 200, 700, 400]
         sort.selectionSort(a)
-        self.assertEqual(a, [23, 78, 110, 158, 324, 345, 547])  
+        self.assertEqual(a, [100, 200, 300, 400, 500, 600, 700])  
 
     def test_selection_sort_4(self):
         """
