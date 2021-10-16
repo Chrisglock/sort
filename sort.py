@@ -22,3 +22,13 @@ def quick_sort(array, i=None, j=None):
         pivot = get_pivot(array, i, j)
         quick_sort(array, i, pivot - 1)
         quick_sort(array, pivot + 1, j)
+
+def bubbleSort(lista):
+    n = len(lista)
+
+    for i in xrange(1, n):
+        for j in xrange(n-i):
+
+
+            if lista[j] > lista[j+1]:
+                lista[j], lista[j+1] = lista[j+1], lista[j]

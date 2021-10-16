@@ -29,11 +29,43 @@ class TestSortingAlgorithms(unittest.TestCase):
 
     def test_quick_sort_4(self):
         """
-        Prueba para lista de tamaño 1
+        Prueba caso general #4
         """
         a = [1, 5, 5, 0, 3, 4, 11]
         sort.quick_sort(a)
         self.assertEqual(a, [0, 1, 3, 4, 5, 5, 11])
+
+    def test_bubble_sort_1(self):
+        """
+        Prueba caso general #1
+        """
+        a = [110, 20, 3, 50, 23, 40, 53]
+        sort.quick_sort(a)
+        self.assertEqual(a, [3, 20, 23, 40, 50, 53, 110])
+
+    def test_bubble_sort_2(self):
+        """
+        Prueba caso general #2
+        """
+        a = [0, 3, 2, 0, 2, 1, 0]
+        sort.quick_sort(a)
+        self.assertEqual(a, [0, 0, 0, 1, 2, 2, 3])  
+
+    def test_bubble_sort_3(self):
+        """
+        Prueba caso general #3
+        """
+        a = [7, 6, 5, 4, 3, 2, 1]
+        sort.quick_sort(a)
+        self.assertEqual(a, [1, 2, 3, 4, 5, 6, 7])  
+
+    def test_bubble_sort_4(self):
+        """
+        Prueba caso lista tamaño 1 #4
+        """
+        a = [9]
+        sort.quick_sort(a)
+        self.assertEqual(a, [9])         
 
 if __name__ == '__main__':
     unittest.main()
