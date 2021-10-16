@@ -32,3 +32,16 @@ def bubbleSort(lista):
 
             if lista[j] > lista[j+1]:
                 lista[j], lista[j+1] = lista[j+1], lista[j]
+
+def insertionSort(lista):
+    n = len(lista)
+
+    for i in xrange(1, n):
+        val = lista[i]
+        j = i
+
+        while j > 0 and lista[j-1] > val:
+            lista[j] = lista[j-1]
+            j -= 1
+
+        lista[j] = val

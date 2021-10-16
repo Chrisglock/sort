@@ -65,7 +65,39 @@ class TestSortingAlgorithms(unittest.TestCase):
         """
         a = [9]
         sort.quick_sort(a)
-        self.assertEqual(a, [9])         
+        self.assertEqual(a, [9])
+
+    def test_insertion_sort_1(self):
+        """
+        Prueba caso general #1
+        """
+        a = [20, 7, 5, 4, 10, 1, 5]
+        sort.quick_sort(a)
+        self.assertEqual(a, [1, 4, 5, 5, 7, 10, 20])
+
+    def test_insertion_sort_2(self):
+        """
+        Prueba caso general #2
+        """
+        a = [7, 9, 4, 3, 2, 1, 1130]
+        sort.quick_sort(a)
+        self.assertEqual(a, [1, 2, 3, 4, 7, 9, 1130])  
+
+    def test_insertion_sort_3(self):
+        """
+        Prueba caso general #3
+        """
+        a = [110, 78, 345, 23, 324, 547, 158]
+        sort.quick_sort(a)
+        self.assertEqual(a, [23, 78, 110, 158, 324, 345, 547])  
+
+    def test_insertion_sort_4(self):
+        """
+        Prueba caso lista tamaño 1 #4
+        """
+        a = [200]
+        sort.quick_sort(a)
+        self.assertEqual(a, [200])         
 
 if __name__ == '__main__':
     unittest.main()
