@@ -40,7 +40,7 @@ class TestSortingAlgorithms(unittest.TestCase):
         Prueba caso general #1
         """
         a = [110, 20, 3, 50, 23, 40, 53]
-        sort.quick_sort(a)
+        sort.bubbleSort(a)
         self.assertEqual(a, [3, 20, 23, 40, 50, 53, 110])
 
     def test_bubble_sort_2(self):
@@ -48,7 +48,7 @@ class TestSortingAlgorithms(unittest.TestCase):
         Prueba caso general #2
         """
         a = [0, 3, 2, 0, 2, 1, 0]
-        sort.quick_sort(a)
+        sort.bubbleSort(a)
         self.assertEqual(a, [0, 0, 0, 1, 2, 2, 3])  
 
     def test_bubble_sort_3(self):
@@ -56,7 +56,7 @@ class TestSortingAlgorithms(unittest.TestCase):
         Prueba caso general #3
         """
         a = [7, 6, 5, 4, 3, 2, 1]
-        sort.quick_sort(a)
+        sort.bubbleSort(a)
         self.assertEqual(a, [1, 2, 3, 4, 5, 6, 7])  
 
     def test_bubble_sort_4(self):
@@ -64,7 +64,7 @@ class TestSortingAlgorithms(unittest.TestCase):
         Prueba caso lista tamaño 1 #4
         """
         a = [9]
-        sort.quick_sort(a)
+        sort.bubbleSort(a)
         self.assertEqual(a, [9])
 
     def test_insertion_sort_1(self):
@@ -72,7 +72,7 @@ class TestSortingAlgorithms(unittest.TestCase):
         Prueba caso general #1
         """
         a = [20, 7, 5, 4, 10, 1, 5]
-        sort.quick_sort(a)
+        sort.insertionSort(a)
         self.assertEqual(a, [1, 4, 5, 5, 7, 10, 20])
 
     def test_insertion_sort_2(self):
@@ -80,7 +80,7 @@ class TestSortingAlgorithms(unittest.TestCase):
         Prueba caso general #2
         """
         a = [7, 9, 4, 3, 2, 1, 1130]
-        sort.quick_sort(a)
+        sort.insertionSort(a)
         self.assertEqual(a, [1, 2, 3, 4, 7, 9, 1130])  
 
     def test_insertion_sort_3(self):
@@ -88,7 +88,7 @@ class TestSortingAlgorithms(unittest.TestCase):
         Prueba caso general #3
         """
         a = [110, 78, 345, 23, 324, 547, 158]
-        sort.quick_sort(a)
+        sort.insertionSort(a)
         self.assertEqual(a, [23, 78, 110, 158, 324, 345, 547])  
 
     def test_insertion_sort_4(self):
@@ -96,8 +96,42 @@ class TestSortingAlgorithms(unittest.TestCase):
         Prueba caso lista tamaño 1 #4
         """
         a = [200]
-        sort.quick_sort(a)
-        self.assertEqual(a, [200])         
+        sort.insertionSort(a)
+        self.assertEqual(a, [200])
+
+    def test_selection_sort_1(self):
+        """
+        Prueba caso general #1
+        """
+        a = [110, 78, 345, 23, 324, 547, 158]
+        sort.selectionSort(a)
+        self.assertEqual(a, [23, 78, 110, 158, 324, 345, 547])  
+
+    def test_selection_sort_2(self):
+        """
+        Prueba caso general #2
+        """
+        a = [110, 78, 345, 23, 324, 547, 158]
+        sort.selectionSort(a)
+        self.assertEqual(a, [23, 78, 110, 158, 324, 345, 547])  
+
+    def test_selection_sort_3(self):
+        """
+        Prueba caso general #3
+        """
+        a = [110, 78, 345, 23, 324, 547, 158]
+        sort.selectionSort(a)
+        self.assertEqual(a, [23, 78, 110, 158, 324, 345, 547])  
+
+    def test_selection_sort_4(self):
+        """
+        Prueba caso lista tamaño 1 #4
+        """
+        a = [500]
+        sort.selectionSort(a)
+        self.assertEqual(a, [500])
+
+          
 
 if __name__ == '__main__':
     unittest.main()

@@ -1,3 +1,4 @@
+import sys
 def get_pivot(array, i, j):
 	pivot = array[j]
 	item = i - 1
@@ -26,8 +27,8 @@ def quick_sort(array, i=None, j=None):
 def bubbleSort(lista):
     n = len(lista)
 
-    for i in xrange(1, n):
-        for j in xrange(n-i):
+    for i in range(1, n):
+        for j in range(n-i):
 
 
             if lista[j] > lista[j+1]:
@@ -36,7 +37,7 @@ def bubbleSort(lista):
 def insertionSort(lista):
     n = len(lista)
 
-    for i in xrange(1, n):
+    for i in range(1, n):
         val = lista[i]
         j = i
 
@@ -45,3 +46,15 @@ def insertionSort(lista):
             j -= 1
 
         lista[j] = val
+
+def selectionSort(lista):
+    n = len(lista)
+
+    for i in range(n - 1):
+        menor = i
+
+        for j in range(i + 1, n):
+            if lista[j] < lista[menor]:
+                menor = j
+
+        lista[i], lista[menor] = lista[menor], lista[i]
